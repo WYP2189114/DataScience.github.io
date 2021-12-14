@@ -1,0 +1,365 @@
+body{
+   z-index: 0;
+   margin:0;
+   overflow-x: hidden;
+   overflow-y: scroll;
+   font-family:Arial, Helvetica, sans-serif;
+}
+ul{
+    overflow: hidden;
+}
+li{
+    display: inline-block;
+}
+h2{
+    font-size: 40px;
+}
+/* 導覽列 */
+div.header {
+    /* overflow: hidden; */
+    position: fixed;
+    width:100%;
+    height: 10%;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    z-index: 100;}
+div.header li{
+    height: 100%;
+    font-size: 170%;
+    list-style: none;
+    text-align: center;
+    float:left;
+    padding-right: 50px;
+}
+/* 下拉選單 */
+li a, .dropbtn{
+    display: inline-block;
+    color: white;
+    text-align: center;
+
+}
+div.header ul li:hover{
+    background-color: dimgray;
+    font-weight:bold;}
+a {
+    text-decoration:none;
+    color:white;
+    }
+li.dropdown{
+    display: inline-block;
+}
+.dropdowncontent{
+    min-width: 180px;
+    box-shadow: 0px 6px 6px 0px gray;
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+}
+.dropdowncontent a{
+    color: black;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: lavender;
+    display: block;
+    font-size: 70%;
+    text-align: left;
+}
+.dropdowncontent a:hover{
+    background-color:rgb(218, 216, 216);
+}
+.dropdown:hover .dropdowncontent{
+    display: block;
+}
+/* 左邊固定方塊 */
+div.left{
+    background-color: rgb(252, 252, 252);
+    position: fixed;
+    z-index: 99;
+    width: 50%;
+    top:10%;
+    height: 100%;
+}
+.left div{
+    float: left;
+}
+/* 左邊的圓 */
+.circle {
+    width: 100%;
+    height: 100%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+.circle:hover{
+    transform:translateY(-10px);
+}
+.difficulty div{
+    display: inline-block;
+    margin-right: 4px;
+    text-align: center;
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+}
+.difficulty a{
+    font-size: 35px;
+    color: black;
+}
+.classification div{
+    float: left;
+    margin-right: 2px;
+    text-align: center;
+    width:120px;
+    height:120px;
+    line-height: 120px;
+    background-color: dimgray;
+}
+/* 右邊區塊 */
+div.right{ 
+    position: absolute;
+    top:69.09px;
+    left:50%;
+    background-color:  rgb(252, 252, 252);
+    z-index: 97;
+    width:50%;
+    height: 1400px;
+}
+span.comment{
+    font-size: 15px;
+    margin-left: 10px;
+}
+div.rightbar{
+    position: absolute;
+    top: 69.09px;
+    left:96.3%;
+    background-color: rgb(252, 252, 252);
+    z-index: 98;
+    width: 3.7%;
+    height: 1350px;
+}
+div.left img{
+    height: 100%;
+}
+div.right img{
+    width: 200px;
+}
+.carousel{
+    white-space:nowrap;
+    overflow: visible;
+    display: inline;
+    position: relative;
+    height:300px;
+    top: 10px;
+  }
+.carousel a{
+    display: inline;
+    position: relative;
+    transition: 0.1s;
+  }
+.carousel a:hover{
+    transform:translateY(-10px);
+}
+.item{
+    width: 200px;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0px 6px 6px 0px gray;
+}
+/* 右下角圖片 */
+img.rightbtmimg{
+    position: fixed; 
+    z-index: 101;
+    width:100px;
+    right:0px; 
+    bottom: 0px;
+    transition: 0.1s;
+}
+img.rightbtmimg:hover{
+    transform: translateY(-10px);
+}
+/* 右下方狀態列 */
+div.buttombar{
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+    background-color: rgb(95, 95, 95);
+    z-index: 98;
+    width:100%;
+    height:50px;
+    line-height: 50px;
+}
+div.buttombar span{
+    color: rgb(150, 150, 150);
+}
+  /*動畫關鍵影格, slider+n,n=第幾個 動畫名字*/
+    @keyframes slider1 {
+        0%{
+            left:0px;
+            opacity:1;
+        }
+        20% {
+            left:220px; 
+            opacity:1;
+        }
+        40% {
+            left:440px;
+            opacity:1;
+        }
+        60%{
+            left:660px;
+            opacity:0;
+        }
+        80%{
+            left:-220px;
+            opacity:0;
+        }
+        100%{
+            left:0px;
+            opacity:1;
+        }
+    }
+    @keyframes slider2 {
+        0%{
+            left:220px;
+            opacity:1;
+        }
+        20% {
+            left:440px; 
+            opacity:1;
+        }
+        40% {
+            left:660px; 
+            opacity:0;
+        }
+        60% {
+            left:-220px; 
+            opacity:0;
+        }
+        80% {
+            left:0px;
+            opacity:1;
+        }
+        100% {
+            left:220px;
+            opacity:1;
+        }
+    }
+    @keyframes slider3 {
+        0%{
+            left:440px;
+            opacity:1;
+            }
+        20% {
+            left:660px; 
+            opacity:0;
+        }
+        40% {
+            left:-220px;
+            opacity:0;
+            }
+        60% {
+            left:0px;
+            opacity:1;
+            }
+        80%{
+            left:220px;
+            opacity:1;
+        }
+        100% {
+            left:440px;
+            opacity:1;
+            }
+      }
+    @keyframes slider4 {
+        0%{
+            left:660px;
+            opacity:0;
+        }
+        20% {
+            left:-220px; 
+            opacity:0;
+        }
+        40% {
+            left:0px;
+            opacity:1;
+        }
+        60%{
+            left:220px;
+            opacity:1;
+        }
+        80% {
+            left:440px;
+            opacity:1;
+        }
+        100% {
+            left:660px;
+            opacity:0;
+        }
+      }
+    @keyframes slider5 {
+    0%{
+        left:-220px;
+        opacity:0;
+    }
+    20% {
+        left:0px; 
+        opacity:1;
+    }
+    40% {
+        left:220px;
+        opacity:1;
+    }
+    60%{
+        left:440px;
+        opacity:1;
+    }
+    80% {
+        left:660px;
+        opacity:0;
+    }
+    100% {
+        left:-220px;
+        opacity:0;
+    }
+    }
+  /*每個圖片*/
+   .carousel a:nth-child(1){
+        position: absolute;
+        left:0px;
+        animation: slider1 15s ease 2s infinite;
+    }
+   
+    .carousel a:nth-child(2) {
+        position: absolute;
+        left:220px;
+        animation: slider2 15s ease 2s infinite;
+    }
+   
+    .carousel a:nth-child(3) {
+        position: absolute;
+        left:440px;
+        animation: slider3 15s ease 2s infinite;
+    }
+   
+    .carousel a:nth-child(4) {
+        position: absolute;
+        opacity: 0;
+        left:660px;
+        animation: slider4 15s ease 2s infinite;
+    }
+    .carousel a:nth-child(5) {
+        position: absolute;
+        opacity: 0;
+        left:-220px;
+        animation: slider5 15s ease 2s infinite;
+    }
+  /*當滑鼠移動到圖片的區塊時，動畫暫停
+     .carousel a:hover{
+    animation-play-state: paused;
+    }*/
+
+
